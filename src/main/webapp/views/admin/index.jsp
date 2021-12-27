@@ -1,19 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ include file="../utils/base.jsp"%>
+<c:set var="instance" value="${title}" scope="request" />
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1" />
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet" />
-<title>Admin Dashboard</title>
-</head>
 <body class="dark:bg-gray-900 px-12 py-6">
 	<h1 class="text-center dark:text-white text-3xl font-bold opacity-80">
-		Admin Dashboard</h1>
+		<a href="/api/v1/admin">Admin ${title}</a>
+	</h1>
 	<div
 		class="
         grid grid-cols-1
@@ -24,7 +15,7 @@
         gap-4
       ">
 		<c:forEach items="${cardsData}" var="cardItem">
-			<div
+			<div onclick="window.location.href='${cardItem.getLink()}'"
 				class="
           bg-white
           dark:bg-gray-800
@@ -65,4 +56,4 @@
 		</c:forEach>
 	</div>
 </body>
-</html>
+<%@ include file="../utils/base1.jsp"%>

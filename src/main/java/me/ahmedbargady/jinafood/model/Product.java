@@ -5,6 +5,11 @@ import org.springframework.data.annotation.Id;
 public class Product {
 	@Id
 	private String id;
+
+	public String getId() {
+		return id;
+	}
+
 	private String title, description;
 	private double salePrice, regularPrice;
 	private String[] images;

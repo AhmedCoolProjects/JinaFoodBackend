@@ -1,7 +1,16 @@
 package me.ahmedbargady.jinafood.model;
 
 public class AdminDashboardCard {
-	private String icon, description, title;
+	private String icon, description, title, link;
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+
 	private int number;
 
 	public String getIcon() {
@@ -36,9 +45,10 @@ public class AdminDashboardCard {
 		this.number = number;
 	}
 
-	public AdminDashboardCard(String icon, String title, String description, int number) {
+	public AdminDashboardCard(String icon, String title, String description, int number, String link) {
 		super();
 		this.icon = icon;
+		this.link = link;
 		this.title = title;
 		this.description = description;
 		this.number = number;

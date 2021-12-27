@@ -20,10 +20,7 @@ public class CustomerService {
 	public CustomerService(CustomerRepository customerRepository) {
 		super();
 		this.customerRepository = customerRepository;
-	}
 
-	public CustomerRepository getCustomerRepository() {
-		return customerRepository;
 	}
 
 	public Optional<Customer> get(String id) {
