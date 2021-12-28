@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 public class Person {
 	@Id
 	private String id;
-	private String first_name, last_name, email, phone, title;
+	private String first_name, last_name, email, phone;
 	private Gender gender;
 
 	public Gender getGender() {
@@ -48,21 +48,20 @@ public class Person {
 		this.phone = phone;
 	}
 
-	public String getTitle() {
-		return title;
+	public String getId() {
+		return id;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public void setId(String id) {
+		this.id = id;
 	}
 
-	public Person(String first_name, String last_name, String email, String phone, String title, Gender gender) {
+	public Person(String first_name, String last_name, String email, String phone, Gender gender) {
 		super();
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email = email;
 		this.phone = phone;
-		this.title = title;
 		this.gender = gender;
 	}
 

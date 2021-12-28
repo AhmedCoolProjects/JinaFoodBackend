@@ -25,9 +25,9 @@ public class Employee extends Person {
 		this.birthday = birthday;
 	}
 
-	public Employee(String first_name, String last_name, String email, String phone, String title, Gender gender,
-			double salary, LocalDate birthday) {
-		super(first_name, last_name, email, phone, title, gender);
+	public Employee(String first_name, String last_name, String email, String phone, Gender gender, double salary,
+			LocalDate birthday) {
+		super(first_name, last_name, email, phone, gender);
 		this.salary = salary;
 		this.birthday = birthday;
 	}

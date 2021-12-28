@@ -10,6 +10,10 @@ public class Product {
 		return id;
 	}
 
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	private String title, description;
 	private double salePrice, regularPrice;
 	private String[] images;

@@ -14,9 +14,8 @@ public class Customer extends Person {
 		this.adress = adress;
 	}
 
-	public Customer(String first_name, String last_name, String email, String phone, String title, Gender gender,
-			String adress) {
-		super(first_name, last_name, email, phone, title, gender);
+	public Customer(String first_name, String last_name, String email, String phone, Gender gender, String adress) {
+		super(first_name, last_name, email, phone, gender);
 		this.adress = adress;
 	}
 

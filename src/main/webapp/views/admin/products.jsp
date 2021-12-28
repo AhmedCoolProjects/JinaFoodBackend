@@ -7,12 +7,14 @@
 </h1>
 <div class="w-full">
 
-	<%@ include file="../dialogs/addProduct.jsp"%>
+	<%@ include file="../dialogs/productDialog.jsp"%>
 
-	<%@ include file="../tables/editdeletetable.jsp"%>
+	<%@ include file="../tables/productTable.jsp"%>
 	<jsp:include page="../dialogs/delete.jsp">
 		<jsp:param name="deleteMsg"
 			value="Are you sure you want to delete this product?" />
+		<jsp:param name="deleteUrl"
+			value="/api/v1/admin/products/delete/" />
 	</jsp:include>
 </div>
 
