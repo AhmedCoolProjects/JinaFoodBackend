@@ -37,7 +37,11 @@ public class TableService {
 
     public String delete(String id) {
         tableRepository.deleteById(id);
-        return "Done";
+        return "Deleted";
 
+    }
+
+    public Table update(Table e) {
+        return tableRepository.save(e);
     }
 }

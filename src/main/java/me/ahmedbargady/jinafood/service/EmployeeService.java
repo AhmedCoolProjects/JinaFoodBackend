@@ -37,7 +37,11 @@ public class EmployeeService {
 
 	public String delete(String id) {
 		employeeRepository.deleteById(id);
-		return "Done";
+		return "Deleted";
 
+	}
+
+	public Employee update(Employee e) {
+		return employeeRepository.save(e);
 	}
 }
