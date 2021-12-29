@@ -31,9 +31,13 @@ public class ProductService {
 		return productRepository.save(p);
 	}
 
+	public Product update(Product p) {
+		return productRepository.save(p);
+	}
+
 	public String delete(String id) {
 		productRepository.deleteById(id);
-		return "Done";
+		return "Deleted";
 	}
 
 }

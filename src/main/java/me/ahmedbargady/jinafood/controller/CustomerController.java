@@ -43,7 +43,12 @@ public class CustomerController {
 		return customerService.add(c);
 	}
 
-	@GetMapping("/delete/{id}")
+	@PostMapping("/update")
+	public Customer update(@RequestBody Customer c) {
+		return customerService.update(c);
+	}
+
+	@PostMapping("/delete/{id}")
 	public String delete(@PathVariable String id) {
 		return customerService.delete(id);
 	}

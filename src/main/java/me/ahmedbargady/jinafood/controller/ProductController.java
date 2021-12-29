@@ -3,8 +3,6 @@ package me.ahmedbargady.jinafood.controller;
 import java.util.List;
 import java.util.Optional;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -45,19 +43,9 @@ public class ProductController {
 		return productService.add(p);
 	}
 
-	@PostMapping("/add/admin")
-	public String addadmin(HttpServletRequest request) {
-		String title = request.getParameter("title");
-		String description = request.getParameter("description");
-		String salePrice = request.getParameter("salePrice");
-		String regularPrice = request.getParameter("regularPrice");
-		String images1 = request.getParameter("images");
-		String[] images = images1.split(";");
-
-		Product p = new Product(title, description, Double.parseDouble(salePrice), Double.parseDouble(regularPrice),
-				images);
-		productService.add(p);
-		return "admin/products";
+	@PostMapping("/update")
+	public Product update(@RequestBody Product p) {
+		return productService.update(p);
 	}
 
 	@GetMapping("/delete/{id}")

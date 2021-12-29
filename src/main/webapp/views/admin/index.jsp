@@ -1,4 +1,4 @@
-<%@ include file="../utils/base.jsp"%>
+<%@ include file="../utils/base.jsp" %>
 <c:set var="instance" value="${title}" scope="request" />
 
 <body class="dark:bg-gray-900 px-12 py-6">

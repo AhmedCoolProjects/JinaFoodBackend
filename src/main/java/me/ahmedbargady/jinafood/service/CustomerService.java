@@ -37,8 +37,11 @@ public class CustomerService {
 
 	public String delete(String id) {
 		customerRepository.deleteById(id);
-		return "Done";
+		return "Deleted";
+	}
 
+	public Customer update(Customer c) {
+		return customerRepository.save(c);
 	}
 
 }
