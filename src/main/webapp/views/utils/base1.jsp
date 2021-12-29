@@ -66,6 +66,55 @@
 		$("#employee-gender").find(':radio[name=gender][value="Male"]').prop(
 				'checked', true);
 	}
+	// tables
+	function setFormToUpdateTable(id, number, size, stage, isEmpty, dialogTitle) {
+		$("#table-dialog-title").text(dialogTitle);
+		$("#table-form").attr("action",
+				"/api/v1/admin/tables/update/" + id);
+		$("#table-number").val(number);
+		$("#table-size").val(size);
+		$("#table-stage").val(stage);
+		$("#table-isEmpty").find(':radio[name=isEmpty][value="'+isEmpty+'"]')
+				.prop('checked', true);
+		
+
+	}
+	function setFormToAddTable(dialogTitle) {
+		$("#table-dialog-title").text(dialogTitle);
+		$("#table-form").attr("action", "/api/v1/admin/tables");
+		$("#table-number").val("");
+		$("#table-size").val("");
+		$("#table-stage").val("");
+		$("#table-isEmpty").find(':radio[name=isEmpty][value="1"]').prop(
+				'checked', true);
+		
+	}
+		// customers
+	function setFormToUpdateCustomer(id, first_name, last_name, email, phone,
+			gender, adress, dialogTitle) {
+		$("#customer-dialog-title").text(dialogTitle);
+		$("#customer-form").attr("action",
+				"/api/v1/admin/customers/update/" + id);
+		$("#customer-first-name").val(first_name);
+		$("#customer-last-name").val(last_name);
+		$("#customer-email").val(email);
+		$("#customer-phone").val(phone);
+		$("#customer-adress").val(adress);
+		$("#customer-gender").find(':radio[name=gender][value="'+gender+'"]')
+				.prop('checked', true);
+
+	}
+	function setFormToAddCustomer(dialogTitle) {
+		$("#customer-dialog-title").text(dialogTitle);
+		$("#customer-form").attr("action", "/api/v1/admin/customers");
+		$("#customer-first-name").val("");
+		$("#customer-last-name").val("");
+		$("#customer-email").val("");
+		$("#customer-phone").val("");
+		$("#customer-adress").val("");
+		$("#customer-gender").find(':radio[name=gender][value="Male"]').prop(
+				'checked', true);
+	}
 </script>
 </body>
 </html>

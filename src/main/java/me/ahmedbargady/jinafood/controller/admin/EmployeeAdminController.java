@@ -47,12 +47,7 @@ public class EmployeeAdminController {
 		String gender1 = request.getParameter("gender");
 		String birthday1 = request.getParameter("birthday"); // 25/12/2021
 		double salary = Double.parseDouble(request.getParameter("salary"));
-		Gender gender;
-		if (gender1 == "Male") {
-			gender = Gender.Male;
-		} else {
-			gender = Gender.Female;
-		}
+		Gender gender = Gender.valueOf(gender1);
 		String[] birthday2 = birthday1.split("-");
 		int[] birthday3 = { 0, 0, 0 };
 		for (int i = 0; i < birthday2.length; i++) {
@@ -79,9 +74,9 @@ public class EmployeeAdminController {
 		String birthday1 = request.getParameter("birthday"); // 25/12/2021
 		double salary = Double.parseDouble(request.getParameter("salary"));
 		Gender gender = Gender.valueOf(gender1);
-//		if (gender1 == "Female") {
-//			gender = Gender.Female;
-//		}
+		// if (gender1 == "Female") {
+		// gender = Gender.Female;
+		// }
 		String[] birthday2 = birthday1.split("-");
 		int[] birthday3 = { 0, 0, 0 };
 		for (int i = 0; i < birthday2.length; i++) {

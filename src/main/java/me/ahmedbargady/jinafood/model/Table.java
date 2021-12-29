@@ -8,14 +8,22 @@ public class Table {
 	@Id
 	private String id;
 	private int number, size, stage;
-	private boolean isEmpty;
+	private EmptyTable isEmpty;
 
 	public int getNumber() {
 		return number;
 	}
 
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	public void setNumber(int number) {
 		this.number = number;
+	}
+
+	public String getId() {
+		return id;
 	}
 
 	public int getSize() {
@@ -34,15 +42,15 @@ public class Table {
 		this.stage = stage;
 	}
 
-	public boolean isEmpty() {
+	public EmptyTable getIsEmpty() {
 		return isEmpty;
 	}
 
-	public void setEmpty(boolean isEmpty) {
+	public void setIsEmpty(EmptyTable isEmpty) {
 		this.isEmpty = isEmpty;
 	}
 
-	public Table(int number, int size, int stage, boolean isEmpty) {
+	public Table(int number, int size, int stage, EmptyTable isEmpty) {
 		super();
 		this.number = number;
 		this.size = size;
