@@ -55,11 +55,12 @@ public class Order {
 		this.customerId = customerId;
 	}
 
-	public boolean isDelievred() {
+	public boolean getIsDelievred() {
 		return isDelievred;
 	}
 
 	public void setDelievred(boolean isDelievred) {
+
 		this.isDelievred = isDelievred;
 	}
 
