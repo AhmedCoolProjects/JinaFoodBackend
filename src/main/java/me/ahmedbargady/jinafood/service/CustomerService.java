@@ -6,11 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import lombok.AllArgsConstructor;
 import me.ahmedbargady.jinafood.model.Customer;
 import me.ahmedbargady.jinafood.repository.CustomerRepository;
 
-@AllArgsConstructor
 @Service
 public class CustomerService {
 

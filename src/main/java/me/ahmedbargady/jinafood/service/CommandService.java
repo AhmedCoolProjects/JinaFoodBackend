@@ -6,11 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import lombok.AllArgsConstructor;
 import me.ahmedbargady.jinafood.model.Command;
 import me.ahmedbargady.jinafood.repository.CommandRepository;
 
-@AllArgsConstructor
 @Service
 public class CommandService {
 
