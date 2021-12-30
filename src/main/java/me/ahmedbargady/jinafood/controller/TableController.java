@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import me.ahmedbargady.jinafood.model.Table;
 import me.ahmedbargady.jinafood.service.TableService;
 
 @RestController
+@CrossOrigin(origins = "https://jinafood.vercel.app")
 @RequestMapping("/api/v1/table")
 public class TableController {
 

@@ -14,6 +14,7 @@ import me.ahmedbargady.jinafood.model.Command;
 import me.ahmedbargady.jinafood.service.CommandService;
 
 @RestController
+
 @RequestMapping("/api/v1/command")
 public class CommandController {
 

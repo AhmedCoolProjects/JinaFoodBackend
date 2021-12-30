@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,6 +17,7 @@ import me.ahmedbargady.jinafood.service.CommandService;
 import me.ahmedbargady.jinafood.service.OrderService;
 
 @RestController
+@CrossOrigin(origins = "https://jinafood.vercel.app")
 @RequestMapping("/api/v1/order")
 public class OrderController {
 
