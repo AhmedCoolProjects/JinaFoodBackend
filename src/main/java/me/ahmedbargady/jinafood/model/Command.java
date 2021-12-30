@@ -7,16 +7,25 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Command {
 	@Id
 	private String id;
-	private Food food;
+
+	private String foodId, customerId;
 	private int count;
 	private double totalPrice;
 
-	public Food getFood() {
-		return food;
+	public String getFoodId() {
+		return foodId;
 	}
 
-	public void setFood(Food food) {
-		this.food = food;
+	public void setFoodId(String foodId) {
+		this.foodId = foodId;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setFood(String foodId) {
+		this.foodId = foodId;
 	}
 
 	public int getCount() {
@@ -35,11 +44,20 @@ public class Command {
 		this.totalPrice = totalPrice;
 	}
 
-	public Command(Food food, int count, double totalPrice) {
+	public String getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
+
+	public Command(String foodId, int count, double totalPrice, String customerId) {
 		super();
-		this.food = food;
+		this.foodId = foodId;
 		this.count = count;
 		this.totalPrice = totalPrice;
+		this.customerId = customerId;
 	}
 
 }

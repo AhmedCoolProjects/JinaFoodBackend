@@ -12,11 +12,19 @@ public class Order {
 	private Command[] commands;
 	private double totalPrice;
 	private LocalDate date;
-	private Customer customer;
+	private String customerId;
 	private boolean isDelievred;
 
 	public Command[] getCommands() {
 		return commands;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getId() {
+		return id;
 	}
 
 	public void setCommands(Command[] commands) {
@@ -39,12 +47,12 @@ public class Order {
 		this.date = date;
 	}
 
-	public Customer getCustomer() {
-		return customer;
+	public String getCustomerId() {
+		return customerId;
 	}
 
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
 
 	public boolean isDelievred() {
@@ -55,12 +63,12 @@ public class Order {
 		this.isDelievred = isDelievred;
 	}
 
-	public Order(Command[] commands, double totalPrice, LocalDate date, Customer customer, boolean isDelievred) {
+	public Order(Command[] commands, double totalPrice, LocalDate date, String customerId, boolean isDelievred) {
 		super();
 		this.commands = commands;
 		this.totalPrice = totalPrice;
 		this.date = date;
-		this.customer = customer;
+		this.customerId = customerId;
 		this.isDelievred = isDelievred;
 	}
 

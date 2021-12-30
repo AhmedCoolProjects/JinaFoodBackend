@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import me.ahmedbargady.jinafood.model.Command;
 import me.ahmedbargady.jinafood.model.Order;
+import me.ahmedbargady.jinafood.service.CommandService;
 import me.ahmedbargady.jinafood.service.OrderService;
 
 @RestController
@@ -18,14 +20,16 @@ import me.ahmedbargady.jinafood.service.OrderService;
 public class OrderController {
 
     private final OrderService orderService;
+    private final CommandService commandService;
 
     public OrderService getOrderService() {
         return orderService;
     }
 
-    public OrderController(OrderService orderService) {
+    public OrderController(OrderService orderService, CommandService commandService) {
         super();
         this.orderService = orderService;
+        this.commandService = commandService;
     }
 
     @GetMapping("/id/{id}")
@@ -40,11 +44,17 @@ public class OrderController {
 
     @PostMapping("/add")
     public Order add(@RequestBody Order p) {
+        for (Command command : p.getCommands()) {
+            commandService.add(command);
+        }
         return orderService.add(p);
     }
 
     @PostMapping("/update")
     public Order update(@RequestBody Order p) {
+        for (Command command : p.getCommands()) {
+            commandService.update(command);
+        }
         return orderService.update(p);
     }
 
