@@ -10,8 +10,8 @@ public class DummyData {
 			"/api/v1/admin/orders");
 	AdminDashboardCard tablesCard = new AdminDashboardCard("table_restaurant", "Tables", "description here ...", 5,
 			"/api/v1/admin/tables");
-	AdminDashboardCard productsCard = new AdminDashboardCard("fastfood", "Products", "description here ...", 50,
-			"/api/v1/admin/products");
+	AdminDashboardCard productsCard = new AdminDashboardCard("fastfood", "Foods", "description here ...", 50,
+			"/api/v1/admin/foods");
 
 	public AdminDashboardCard[] listCards = { employeesCard, productsCard, tablesCard, customersCard, ordersCard };
 

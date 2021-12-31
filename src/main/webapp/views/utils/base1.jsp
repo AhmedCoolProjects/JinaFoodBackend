@@ -115,6 +115,32 @@
 		$("#customer-gender").find(':radio[name=gender][value="Male"]').prop(
 				'checked', true);
 	}
+		// foods
+	function setFormToUpdateFood(id, title, description, salePrice,
+			regularPrice, images, ingredients, category, dialogTitle) {
+		$("#food-dialog-title").text(dialogTitle);
+		$("#food-form")
+				.attr("action", "/api/v1/admin/foods/update/" + id);
+		$("#food-title").val(title);
+		$("#food-description").val(description);
+		$("#food-sale-price").val(salePrice);
+		$("#food-regular-price").val(regularPrice);
+		$("#food-images").val(images);
+		$("#food-ingredients").val(ingredients);
+		$("#food-category").val(category);
+
+	}
+	function setFormToAddFood(dialogTitle) {
+		$("#food-dialog-title").text(dialogTitle);
+		$("#food-form").attr("action", "/api/v1/admin/foods");
+		$("#food-title").val("");
+		$("#food-description").val("");
+		$("#food-sale-price").val("");
+		$("#food-regular-price").val("");
+		$("#food-images").val("");
+		$("#food-ingredients").val("");
+		$("#food-category").val("");
+	}
 </script>
 </body>
 </html>

@@ -29,4 +29,37 @@ public class Food extends Product {
 		this.category = category;
 	}
 
+	public String ingredientsToString() {
+		String StringResult = "";
+		for (String s : ingredients) {
+			StringResult += s;
+			if (s != ingredients[ingredients.length - 1])
+				StringResult += ";";
+
+		}
+		return StringResult;
+	}
+
+	public String categoryToString() {
+		String StringResult = "";
+		for (String s : category) {
+			StringResult += s;
+			if (s != category[category.length - 1])
+				StringResult += ";";
+
+		}
+		return StringResult;
+	}
+
+	public String imagesToString() {
+		String StringResult = "";
+		for (String s : this.getImages()) {
+			StringResult += s;
+			if (s != this.getImages()[this.getImages().length - 1])
+				StringResult += ";";
+
+		}
+		return StringResult;
+	}
+
 }
