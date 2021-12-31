@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import me.ahmedbargady.jinafood.model.EmptyTable;
-import me.ahmedbargady.jinafood.model.Gender;
 import me.ahmedbargady.jinafood.model.Table;
 import me.ahmedbargady.jinafood.service.TableService;
 

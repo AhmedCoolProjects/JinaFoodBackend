@@ -1,12 +1,7 @@
 package me.ahmedbargady.jinafood;
 
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import me.ahmedbargady.jinafood.model.Gender;
-import me.ahmedbargady.jinafood.repository.CustomerRepository;
 
 @SpringBootApplication
 public class JinafoodbackendApplication {
