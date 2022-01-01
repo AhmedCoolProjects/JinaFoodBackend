@@ -27,4 +27,4 @@ it contains 5 collections:
 
 The frontend for this app is hosted on https://jinafood.vercel.app
 
-**_`You can find the source code of the frontend on https://github.com/AhmedCoolProjects/jinaFoodFrontend`_**
+**_`You can find the source code of the frontend on `_** https://github.com/AhmedCoolProjects/jinaFoodFrontend
