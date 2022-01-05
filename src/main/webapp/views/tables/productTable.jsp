@@ -40,7 +40,7 @@ String idToDelete;
 									class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
 									${productItem.title }</td>
 								<td
-									class="py-4 px-6 text-sm max-w-[60px] sm:max-w-[300px] scrollbar-custom overflow-x-auto text-gray-500 whitespace-nowrap dark:text-gray-400">
+									class="py-4 px-6 text-sm max-w-[60px] sm:max-w-[300px] text-gray-500 dark:text-gray-400">
 									${productItem.description }</td>
 								<td
 									class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">

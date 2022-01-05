@@ -41,7 +41,7 @@
 									class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
 									${foodItem.title }</td>
 								<td
-									class="py-4 px-6 text-sm max-w-[60px] sm:max-w-[300px] scrollbar-custom overflow-x-auto text-gray-500 whitespace-nowrap dark:text-gray-400">
+									class="py-4 px-6 text-sm max-w-[60px] sm:max-w-[300px] text-gray-500 dark:text-gray-400">
 									${foodItem.description }</td>
 								<td
 									class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
@@ -50,12 +50,12 @@
 									class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
 									${foodItem.regularPrice }</td>
 								<td
-									class="py-4 px-6 text-sm grid grid-cols-2 gap-2 text-gray-500 whitespace-nowrap dark:text-gray-400">
+									class="py-4 px-3 text-sm min-w-26 grid grid-cols-1 gap-2 text-gray-500 whitespace-nowrap dark:text-gray-400">
 									
 									<c:forEach items="${foodItem.images}" var="proImg">
 									<img src="${proImg }"
 									alt="${foodItem.title }"
-									class="w-12 grid-col h-12 object-cover rounded-lg"/>
+									class="grid-col object-cover w-20 h-20 rounded-lg"/>
                                 </c:forEach>
 								</td>
                                 <td
